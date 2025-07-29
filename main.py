@@ -12,9 +12,13 @@ prompt = """
 """
 bedrock=boto3.client(service_name="bedrock-runtime")
 payload={
-
-
+    
+    "prompt": "[INST]"+prompt+"[/INST]",
+    "max_gen_len": 512,
+    "temperature": 0.3,
+    "top_p":0.9
 }
+
 
 body= json.dumps(payload)
 model_id="meta.llama2-70b-chat-v1"
