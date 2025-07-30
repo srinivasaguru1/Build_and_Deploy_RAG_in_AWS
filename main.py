@@ -7,7 +7,7 @@ print("impotred successfully...")
 
 prompt="""
 
-        you are a cricket expert now just tell me when RCB will win the IPL?
+        you are a cricket expert now just tell me when SRH will win the IPL?
 """
 
 bedrock=boto3.client(service_name="bedrock-runtime",region_name="us-east-1")
