@@ -6,4 +6,6 @@ openai
 boto3
 langchain_community
 chromadb
-awscli 
+awscli
+streamlit
+
