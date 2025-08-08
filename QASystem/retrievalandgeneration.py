@@ -4,7 +4,7 @@ from langchain_aws.llms.bedrock import BedrockLLM
 from langchain_aws.embeddings import BedrockEmbeddings
 from langchain.prompts import PromptTemplate
 import boto3
-
+from QASystem.ingestion import data_ingestion,get_vector_store
 # Initialize AWS Bedrock client
 bedrock_client = boto3.client(service_name="bedrock-runtime")
 
