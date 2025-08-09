@@ -1,0 +1,33 @@
+name: workflow
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "README.md"
+  pull_request:
+    branches:
+      - main
+
+  permissions:
+    issues: write
+    contents: write
+    contents: read
+    pull-requests: write
+
+jobs:
+  integration:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Lint code
+        uses: echo "Linting repository"
+
+      - name: Run unit tests
+        run: echo "Running unit tests"
+
+build-and-push-ecr-image:
+
